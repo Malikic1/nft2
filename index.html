@@ -1,0 +1,798 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+      integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="css/main.css" />
+    <title>NFT-STORE</title>
+    <style>
+      body {
+        background-image: linear-gradient(
+          to bottom right,
+          rgba(56, 23, 29, 0.561),
+          rgba(14, 13, 13, 0.937),
+          rgb(14, 13, 13) 60%,
+          rgba(31, 15, 18, 0.561)
+        );
+      }
+    </style>
+  </head>
+  <body class="bg-dark text-light">
+    <header
+      class="flex justify-between px-2 md:px-4 lg:px-8 py-4 border-b border-pink"
+    >
+      <div>
+        <h1
+          class="text-2xl text-pink"
+          style="font-family: 'Courier New', Courier, monospace"
+        >
+          <b>NFT MARKET</b>
+        </h1>
+      </div>
+      <div class="hidden emd:block self-center" id="nav">
+        <nav
+          class="flex flex-col gap-y-2 emd:flex-row absolute top-16 left-0 bg-darkgrey w-full emd:relative emd:top-0 emd:bg-transparent pb-3 emd:pb-0 pl-2 emd:pl-0"
+          style="z-index: 5"
+        >
+          <a
+            href=""
+            class="text-lg emd:text-base my-1 emd:my-0 text-pink border-b border-pink w-12"
+            >Home</a
+          >
+          <a href="" class="text-lg emd:text-base emd:ml-3 text-whitesmoke"
+            >Discover</a
+          >
+          <a
+            href=""
+            class="text-lg emd:text-base my-1 emd:my-0 emd:ml-3 text-whitesmoke"
+            >Live Auctions</a
+          >
+          <a href="" class="text-lg emd:text-base emd:ml-3 text-whitesmoke"
+            >Blog</a
+          >
+          <a
+            href=""
+            class="text-lg emd:text-base my-1 emd:my-0 emd:ml-3 text-whitesmoke"
+            >About Us</a
+          >
+          <a
+            href=""
+            class="text-lg emd:text-base my-1 emd:my-0 emd:ml-3 text-whitesmoke"
+            >Connect Us</a
+          >
+          <div class="space-x-4 emd:space-x-0">
+            <a
+              href=""
+              class="w-20 emd:ml-3 bg-pink text-dark text-lg emd:text-sm border border-pink rounded-lg emd:rounded-2xl px-4 py-1 font-semibold"
+              >Sign in</a
+            >
+            <a
+              href=""
+              class="w-20 emd:ml-3 text-pink text-lg text-pink emd:text-sm border-2 border-pink rounded-lg emd:rounded-2xl px-4 py-1 font-semibold"
+              >Register</a
+            >
+          </div>
+        </nav>
+      </div>
+      <div class="emd:hidden">
+        <button id="menu_btn">
+          <i class="fa-solid fa-bars text-2xl text-pink"></i>
+        </button>
+      </div>
+    </header>
+    <main class="md:pt-12 px-2 md:px-4 lg:px-8">
+      <br />
+      <div class="flex flex-col-reverse md:flex-row gap-y-4">
+        <section
+          class="flex-col space-y-5 w-full text-center md:text-left self-center mt-6 md:-mt-0"
+        >
+          <h1 class="text-4xl md:text-5xl">
+            EXPLORE, CREATE AND
+            <span class="text-pink">SELL YOUR NFT'S</span>
+            Your Specific
+            <span class="text-pink">NFTs.</span>
+          </h1>
+          <p class="text-whitesmoke">
+            The World First And Largest NFT/Avatar Marketplace
+          </p>
+
+          <button
+            class="text-pink text-sm border border-pink rounded-sm px-4 py-2 font-bold"
+          >
+            Explore More
+          </button>
+          <button
+            class="bg-pink text-dark text-sm border border-pink rounded-sm px-4 py-2 ml-3 font-bold"
+          >
+            Start Creating
+          </button>
+          <br /><br /><br />
+          <aside class="flex justify-center md:justify-start">
+            <div class="pr-2 esm\:pr-4 border-r border-pink">
+              <span class="text-pink text-xl font-bold">300K+</span><br />
+              <small class="text-whitesmoke">Artwork</small>
+            </div>
+            <div class="px-2 esm:px-4 border-r border-pink">
+              <span class="text-pink text-xl font-bold">100K+</span><br />
+              <small class="text-whitesmoke">Artist</small>
+            </div>
+            <div class="px-2 esm:px-4 border-r border-pink">
+              <span class="text-pink text-xl font-bold">150K+</span><br />
+              <small class="text-whitesmoke">Auction</small>
+            </div>
+            <div class="pl-2 esm:pl-4">
+              <span class="text-pink text-xl font-bold">100K+</span><br />
+              <small class="text-whitesmoke">Active Users</small>
+            </div>
+          </aside>
+        </section>
+        <section class="w-full flex-col -mt-12 md:-mt-24">
+          <div
+            class="w-48 h-auto m-auto px-2 pt-3 pb-1 bg-trans rounded-xl relative top-24 border-b border-t border-red"
+          >
+            <div>
+              <img
+                src="img10.jpeg"
+                alt=""
+                class="w-100 rounded-xl border-b border-red"
+              />
+            </div>
+            <div class="pt-1">
+              <p class="text-center">
+                <b>God's Hand</b><br />
+                <small>$132,00</small>
+              </p>
+            </div>
+          </div>
+          <div class="flex gap-x-2 justify-center">
+            <div
+              class="w-48 h-auto px-2 pt-3 pb-1 bg-trans rounded-xl border-t border-b border-green"
+            >
+              <div>
+                <img
+                  src="img8.jpeg"
+                  alt=""
+                  class="w-100 rounded-xl border-b border-green"
+                />
+              </div>
+              <div class="pt-1">
+                <p class="text-center">
+                  <b>Bleeding Ghost</b><br />
+                  <small>$34,000</small>
+                </p>
+              </div>
+            </div>
+            <div
+              class="w-48 h-auto px-2 pt-3 pb-1 bg-trans rounded-xl border-b border-t border-pink"
+            >
+              <div>
+                <img
+                  src="img3.jpeg"
+                  alt=""
+                  class="w-100 rounded-xl border-b border-pink"
+                />
+              </div>
+              <div class="pt-1">
+                <p class="text-center">
+                  <b>Statue Of Vughae</b><br />
+                  <small>$432,999</small>
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+      <br /><br />
+      <div class="">
+        <h1 class="text-3xl text-center font-semibold"><i>How it works</i></h1>
+        <br />
+        <section class="grid grid-cols-2 es:grid-cols-4 gap-y-3 justify-around">
+          <div class="m-auto text-center">
+            <i
+              class="fa-solid fa-wallet text-pink text-2xl rounded-full px-3 py-2 bg-darkgrey"
+            ></i
+            ><br />
+            <small class="text-whitesmoke">Set Up Your Wallet</small>
+          </div>
+          <div class="m-auto text-center">
+            <i
+              class="fa-solid fa-wallet text-pink text-2xl rounded-full px-3 py-2 bg-darkgrey"
+            ></i
+            ><br />
+            <small class="text-whitesmoke">Create Your Collection</small>
+          </div>
+          <div class="m-auto text-center">
+            <i
+              class="fa-solid fa-wallet text-pink text-2xl rounded-full px-3 py-2 bg-darkgrey"
+            ></i
+            ><br />
+            <small class="text-whitesmoke">Add Your NFTs</small>
+          </div>
+          <div class="m-auto text-center">
+            <i
+              class="fa-solid fa-wallet text-pink text-2xl rounded-full px-3 py-2 bg-darkgrey"
+            ></i
+            ><br />
+            <small class="text-whitesmoke">List Them For Sale </small>
+          </div>
+        </section>
+      </div>
+      <br /><br /><br />
+      <div class="">
+        <p class="text-sm text-center">
+          Explore Our Newly Released NFT Collection
+        </p>
+        <br />
+        <p class="text-3xl font-bold text-center">Our Collections</p>
+        <br />
+        <section class="flex gap-x-1 gap-y-4 justify-center">
+          <div class="w-full md:w-56 m-auto">
+            <img src="cd2.JPEG" alt="" class="w-100 rounded-lg" />
+          </div>
+          <div class="w-full md:w-56 m-auto">
+            <img src="img2.png" alt="" class="w-100 rounded-lg" />
+          </div>
+          <div class="w-full md:w-56 m-auto">
+            <img src="img1.jpeg" alt="" class="w-100 rounded-lg" />
+          </div>
+          <div class="w-full md:w-56 m-auto">
+            <img src="img5.jpeg" alt="" class="w-100 rounded-lg" />
+          </div>
+          <div class="w-full md:w-56 m-auto">
+            <img src="img12.jpeg" alt="" class="w-100 rounded-lg" />
+          </div>
+          <div class="w-full md:w-56 m-auto">
+            <img src="img7.jpeg" alt="" class="w-100 rounded-lg" />
+          </div>
+          <div class="w-full md:w-56 m-auto">
+            <img src="cube.jpeg" alt="" class="w-100 rounded-lg" />
+          </div>
+        </section>
+      </div>
+      <br /><br />
+      <br /><br />
+
+      <div>
+        <p class="text-3xl font-bold text-center"><i>Live Auctions</i></p>
+        <br />
+        <section
+          class="w-full grid grid-cols-2 es:grid-cols-3 justify-center gap-y-3 es:gap-y-0 mt-10 es:mt-0 gap-x-1 esm:gap-x-0"
+        >
+          <div
+            class="w-42 esm:w-48 md:w-56 h-auto m-auto px-2 pt-3 pb-1 bg-darkgrey rounded-xl"
+          >
+            <div>
+              <img src="img9.jpeg" alt="" class="w-100 rounded-lg" />
+            </div>
+            <div class="pt-1 flex justify-between">
+              <p class="flex flex-col">
+                <b>Thalyssra</b>
+              </p>
+              <p class="flex flex-col">
+                <button class="text-dark bg-light text-sm px-2 rounded-sm">
+                  <b>Art</b>
+                </button>
+              </p>
+            </div>
+            <div
+              class="opacity-75 m-auto flex justify-between py-1 mb-1 rounded-sm"
+            >
+              <p class="flex space-x-1">
+                <span class="self-center">
+                  <img src="icon.jpeg" alt="" class="w-8 esm:w-10 rounded-lg"
+                /></span>
+                <span>
+                  <small>Creator<br /><b>Ortega</b></small>
+                </span>
+              </p>
+              <p>
+                <small>Current Bid</small><br />
+                <b>4.89 ETH</b>
+              </p>
+            </div>
+          </div>
+          <div
+            class="w-42 esm:w-48 md:w-56 h-auto m-auto px-2 pt-3 pb-1 bg-darkgrey rounded-xl"
+          >
+            <div>
+              <img src="img6.jpeg" alt="" class="w-100 rounded-lg" />
+            </div>
+            <div class="pt-1 flex justify-between">
+              <p class="flex flex-col">
+                <b>Thalyssra</b>
+              </p>
+              <p class="flex flex-col">
+                <button class="text-dark bg-light text-sm px-2 rounded-sm">
+                  <b>Art</b>
+                </button>
+              </p>
+            </div>
+            <div
+              class="opacity-75 m-auto flex justify-between py-1 mb-1 rounded-sm"
+            >
+              <p class="flex space-x-1">
+                <span class="self-center">
+                  <img src="icon.jpeg" alt="" class="w-8 esm:w-10 rounded-lg"
+                /></span>
+                <span>
+                  <small>Creator<br /><b>Ortega</b></small>
+                </span>
+              </p>
+              <p>
+                <small>Current Bid</small><br />
+                <b>4.89 ETH</b>
+              </p>
+            </div>
+          </div>
+          <div
+            class="w-42 esm:w-48 md:w-56 h-auto m-auto px-2 pt-3 pb-1 bg-darkgrey rounded-xl"
+          >
+            <div>
+              <img src="img4.jpeg" alt="" class="w-100 rounded-lg" />
+            </div>
+            <div class="pt-1 flex justify-between">
+              <p class="flex flex-col">
+                <b>Thalyssra</b>
+              </p>
+              <p class="flex flex-col">
+                <button class="text-dark bg-light text-sm px-2 rounded-sm">
+                  <b>Art</b>
+                </button>
+              </p>
+            </div>
+            <div
+              class="opacity-75 m-auto flex justify-between py-1 mb-1 rounded-sm"
+            >
+              <p class="flex space-x-1">
+                <span class="self-center">
+                  <img src="icon.jpeg" alt="" class="w-8 esm:w-10 rounded-lg"
+                /></span>
+                <span>
+                  <small>Creator<br /><b>Ortega</b></small>
+                </span>
+              </p>
+              <p>
+                <small>Current Bid</small><br />
+                <b>4.89 ETH</b>
+              </p>
+            </div>
+          </div>
+        </section>
+        <br /><br />
+        <p class="text-center">
+          <button
+            class="text-pink text-sm border-2 border-pink rounded-3xl px-4 py-2 font-semibold absolute -mt-48 ml-12 es:-mt-0 es:ml-0"
+          >
+            View More
+          </button>
+        </p>
+      </div>
+      <br /><br /><br />
+      <div>
+        <p class="text-3xl font-bold text-center"><i>Feature NFTs</i></p>
+        <br />
+        <section
+          class="w-full grid grid-cols-2 es:grid-cols-3 gap-x-1 esm:gap-x-0 gap-y-4"
+        >
+          <div
+            class="w-42 esm:w-48 md:w-56 h-auto m-auto px-2 pt-3 pb-1 bg-darkgrey rounded-xl"
+          >
+            <div>
+              <img src="img1.jpeg" alt="" class="w-100 rounded-lg" />
+            </div>
+            <div class="pt-1 flex justify-between">
+              <p class="flex flex-col">
+                <b>Thalyssra</b>
+              </p>
+              <p class="flex flex-col">
+                <button class="text-dark bg-light text-sm px-2 rounded-sm">
+                  <b>Art</b>
+                </button>
+              </p>
+            </div>
+            <div
+              class="opacity-75 m-auto flex justify-between py-1 mb-1 rounded-sm"
+            >
+              <p class="flex space-x-1">
+                <span class="self-center">
+                  <img src="icon.jpeg" alt="" class="w-8 esm:w-10 rounded-lg"
+                /></span>
+                <span>
+                  <small>Creator<br /><b>Ortega</b></small>
+                </span>
+              </p>
+              <p>
+                <small>Current Bid</small><br />
+                <b>4.89 ETH</b>
+              </p>
+            </div>
+          </div>
+          <div
+            class="w-42 esm:w-48 md:w-56 h-auto m-auto px-2 pt-3 pb-1 bg-darkgrey rounded-xl"
+          >
+            <div>
+              <img src="img2.png" alt="" class="w-100 rounded-lg" />
+            </div>
+            <div class="pt-1 flex justify-between">
+              <p class="flex flex-col">
+                <b>Thalyssra</b>
+              </p>
+              <p class="flex flex-col">
+                <button class="text-dark bg-light text-sm px-2 rounded-sm">
+                  <b>Art</b>
+                </button>
+              </p>
+            </div>
+            <div
+              class="opacity-75 m-auto flex justify-between py-1 mb-1 rounded-sm"
+            >
+              <p class="flex space-x-1">
+                <span class="self-center">
+                  <img src="icon.jpeg" alt="" class="w-8 esm:w-10 rounded-lg"
+                /></span>
+                <span>
+                  <small>Creator<br /><b>Ortega</b></small>
+                </span>
+              </p>
+              <p>
+                <small>Current Bid</small><br />
+                <b>4.89 ETH</b>
+              </p>
+            </div>
+          </div>
+          <div
+            class="w-42 esm:w-48 md:w-56 h-auto m-auto px-2 pt-3 pb-1 bg-darkgrey rounded-xl"
+          >
+            <div>
+              <img src="img13.jpeg" alt="" class="w-100 rounded-lg" />
+            </div>
+            <div class="pt-1 flex justify-between">
+              <p class="flex flex-col">
+                <b>Thalyssra</b>
+              </p>
+              <p class="flex flex-col">
+                <button class="text-dark bg-light text-sm px-2 rounded-sm">
+                  <b>Art</b>
+                </button>
+              </p>
+            </div>
+            <div
+              class="opacity-75 m-auto flex justify-between py-1 mb-1 rounded-sm"
+            >
+              <p class="flex space-x-1">
+                <span class="self-center">
+                  <img src="icon.jpeg" alt="" class="w-8 esm:w-10 rounded-lg"
+                /></span>
+                <span>
+                  <small>Creator<br /><b>Ortega</b></small>
+                </span>
+              </p>
+              <p>
+                <small>Current Bid</small><br />
+                <b>4.89 ETH</b>
+              </p>
+            </div>
+          </div>
+          <div
+            class="w-42 esm:w-48 md:w-56 h-auto m-auto px-2 pt-3 pb-1 bg-darkgrey rounded-xl"
+          >
+            <div>
+              <img src="img4.jpeg" alt="" class="w-100 rounded-lg" />
+            </div>
+            <div class="pt-1 flex justify-between">
+              <p class="flex flex-col">
+                <b>Thalyssra</b>
+              </p>
+              <p class="flex flex-col">
+                <button class="text-dark bg-light text-sm px-2 rounded-sm">
+                  <b>Art</b>
+                </button>
+              </p>
+            </div>
+            <div
+              class="opacity-75 m-auto flex justify-between py-1 mb-1 rounded-sm"
+            >
+              <p class="flex space-x-1">
+                <span class="self-center">
+                  <img src="icon.jpeg" alt="" class="w-8 esm:w-10 rounded-lg"
+                /></span>
+                <span>
+                  <small>Creator<br /><b>Ortega</b></small>
+                </span>
+              </p>
+              <p>
+                <small>Current Bid</small><br />
+                <b>4.89 ETH</b>
+              </p>
+            </div>
+          </div>
+          <div
+            class="w-42 esm:w-48 md:w-56 h-auto m-auto px-2 pt-3 pb-1 bg-darkgrey rounded-xl"
+          >
+            <div>
+              <img src="cube.JPEG" alt="" class="w-100 rounded-lg" />
+            </div>
+            <div class="pt-1 flex justify-between">
+              <p class="flex flex-col">
+                <b>Thalyssra</b>
+              </p>
+              <p class="flex flex-col">
+                <button class="text-dark bg-light text-sm px-2 rounded-sm">
+                  <b>Art</b>
+                </button>
+              </p>
+            </div>
+            <div
+              class="opacity-75 m-auto flex justify-between py-1 mb-1 rounded-sm"
+            >
+              <p class="flex space-x-1">
+                <span class="self-center">
+                  <img src="icon.jpeg" alt="" class="w-8 esm:w-10 rounded-lg"
+                /></span>
+                <span>
+                  <small>Creator<br /><b>Ortega</b></small>
+                </span>
+              </p>
+              <p>
+                <small>Current Bid</small><br />
+                <b>4.89 ETH</b>
+              </p>
+            </div>
+          </div>
+          <div
+            class="w-42 esm:w-48 md:w-56 h-auto m-auto px-2 pt-3 pb-1 bg-darkgrey rounded-xl"
+          >
+            <div>
+              <img src="img9.jpeg" alt="" class="w-100 rounded-lg" />
+            </div>
+            <div class="pt-1 flex justify-between">
+              <p class="flex flex-col">
+                <b>Thalyssra</b>
+              </p>
+              <p class="flex flex-col">
+                <button class="text-dark bg-light text-sm px-2 rounded-sm">
+                  <b>Art</b>
+                </button>
+              </p>
+            </div>
+            <div
+              class="opacity-75 m-auto flex justify-between py-1 mb-1 rounded-sm"
+            >
+              <p class="flex space-x-1">
+                <span class="self-center">
+                  <img src="icon.jpeg" alt="" class="w-8 esm:w-10 rounded-lg"
+                /></span>
+                <span>
+                  <small>Creator<br /><b>Ortega</b></small>
+                </span>
+              </p>
+              <p>
+                <small>Current Bid</small><br />
+                <b>4.89 ETH</b>
+              </p>
+            </div>
+          </div>
+        </section>
+        <br /><br />
+        <p class="text-center">
+          <button
+            class="text-pink text-sm border-2 border-pink rounded-3xl px-4 py-2 ml-3 font-semibold"
+          >
+            View More
+          </button>
+        </p>
+      </div>
+      <br /><br /><br />
+      <div>
+        <p class="text-3xl font-bold text-center"><i>Feature Artist</i></p>
+        <br />
+        <section
+          class="w-full grid grid-cols-2 es:grid-cols-3 md:grid-cols-4 gap-y-4"
+        >
+          <div class="w-40 h-auto m-auto px-2 pt-3 pb-1 bg-darkgrey rounded-xl">
+            <div>
+              <img src="img12.jpeg" alt="" class="w-100 rounded-lg" />
+            </div>
+            <div class="pt-1 justify-between text-center">
+              <p class="w-12 m-auto absolute top">
+                <img
+                  src="cd5.jpg"
+                  alt=""
+                  class="rounded-full border-light border-2"
+                />
+              </p>
+              <p class="mt-6">
+                <b>CryptoPunk</b><br />
+                <small>42.7k</small>
+              </p>
+            </div>
+          </div>
+          <div class="w-40 h-auto m-auto px-2 pt-3 pb-1 bg-darkgrey rounded-xl">
+            <div>
+              <img src="cd6.jpg" alt="" class="w-100 rounded-lg" />
+            </div>
+            <div class="pt-1 justify-between text-center">
+              <p class="w-12 m-auto absolute top">
+                <img
+                  src="cd4.JPEG"
+                  alt=""
+                  class="rounded-full border-light border-2"
+                />
+              </p>
+              <p class="mt-6">
+                <b>Craft Art</b><br />
+                <small>52.7k</small>
+              </p>
+            </div>
+          </div>
+          <div class="w-40 h-auto m-auto px-2 pt-3 pb-1 bg-darkgrey rounded-xl">
+            <div>
+              <img src="cd3.jpg" alt="" class="w-100 rounded-lg" />
+            </div>
+            <div class="pt-1 justify-between text-center">
+              <p class="w-12 m-auto absolute top">
+                <img
+                  src="cd1.jpeg"
+                  alt=""
+                  class="rounded-full border-light border-2"
+                />
+              </p>
+              <p class="mt-6">
+                <b>Doodles</b><br />
+                <small>12.7k</small>
+              </p>
+            </div>
+          </div>
+          <div class="w-40 h-auto m-auto px-2 pt-3 pb-1 bg-darkgrey rounded-xl">
+            <div>
+              <img src="cd2.jpeg" alt="" class="w-100 rounded-lg" />
+            </div>
+            <div class="pt-1 justify-between text-center">
+              <p class="w-12 m-auto absolute top">
+                <img
+                  src="cube.JPEG"
+                  alt=""
+                  class="rounded-full border-light border-2"
+                />
+              </p>
+              <p class="mt-6">
+                <b>Capsule House</b><br />
+                <small>65.7k</small>
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <br /><br />
+        <p class="text-center">
+          <button
+            class="text-pink text-sm border-2 border-pink rounded-3xl px-4 py-2 font-semibold es:absolute es:-mt-48 es:ml-16 md:-mt-0 md:ml-0"
+          >
+            View More
+          </button>
+        </p>
+      </div>
+      <br /><br /><br />
+      <div
+        class="text-center bg-pinksmoke py-6 px-1 border-2 border-pink rounded-xl"
+      >
+        <h1 class="font-bold text-2xl"><i>CREATE YOUR OWN NFT!</i></h1>
+        <p class="my-4">
+          <small
+            >We have a large group to support each other in this game. Join us
+            to get the news as<br />
+            soon as possible and follow our latest annoucement</small
+          >
+        </p>
+        <button class="px-4 py-2 bg-pink rounded-3xl">
+          <b>Join Community Now</b>
+        </button>
+      </div>
+      <br /><br /><br />
+      <div class="grid grid-cols-3 md:grid-cols-5 justify-center">
+        <div class="text-2xl text-pink text-center">
+          <h2><i class="fa-brands fa-airbnb"></i>air-bnb</h2>
+        </div>
+        <div class="text-2xl text-pink text-center">
+          <h2>
+            <i class="fa-brands fa-binance"></i
+            ><small
+              ><b><i>BINANCE</i></b></small
+            >
+          </h2>
+        </div>
+        <div class="text-2xl text-pink text-center">
+          <h2>
+            <i class="fa-solid fa-circle text-xs -top-2 relative"></i
+            ><b>plasma</b>pay
+          </h2>
+        </div>
+        <div class="text-2xl text-pink text-center">
+          <h2>coinbase</h2>
+        </div>
+        <div class="text-pink text-center">
+          <h2>
+            <i class="fa-brands fa-paypal"></i><i><b> Pay</b>Pal</i>
+          </h2>
+        </div>
+      </div>
+    </main>
+    <br /><br /><br />
+    <footer class="bg-darkgrey px-4 pt-5 pb-2">
+      <div class="flex flex-col md:flex-row text-center md:text-left gap-y-3">
+        <div class="md:w-1/3">
+          <div class="flex">
+            <h1 class="text-2xl m-auto md:m-0">
+              <span
+                class="text-pink"
+                style="font-family: 'Courier New', Courier, monospace"
+                ><b>NFT</b></span
+              ><span style="font-family: monospace">STORE</span>
+            </h1>
+          </div>
+          <small
+            >We're available for your 24/7 service. <br />
+            Connect with us on our social network
+          </small>
+          <p><i class="fa-solid fa-envelope"></i> &nbsp;&nbsp;user@gmail.com</p>
+        </div>
+        <div class="md:w-1/4 text-sm">
+          <ul>
+            <li>
+              <b class="text-pink border-b border-pink">Information</b>
+            </li>
+            <li class="my-1"><a>Home</a></li>
+            <li><a>Collections</a></li>
+            <li class="my-1"><a>Live Auction</a></li>
+            <li><a>Wallet </a></li>
+            <li class="my-1"><a>History</a></li>
+          </ul>
+        </div>
+        <div class="md:w-1/4 text-sm">
+          <ul>
+            <li>
+              <b class="text-pink border-b border-pink">Customer service</b>
+            </li>
+            <li class="my-1"><a>User FAQs</a></li>
+            <li><a>How To Buy</a></li>
+            <li class="my-1"><a>Report Abuse</a></li>
+            <li><a>Terms of Service</a></li>
+            <li class="my-1"><a>Returns and Refund</a></li>
+          </ul>
+        </div>
+        <div class="md:w-1/4 text-sm">
+          <ul>
+            <li><b class="text-pink border-b border-pink">Help</b></li>
+            <li class="my-1"><a></a></li>
+            <li><a>How To Buy</a></li>
+            <li class="my-1"><a>Report Abuse</a></li>
+            <li><a>Privacy Policy</a></li>
+            <li class="my-1"><a>About Us</a></li>
+            <li><a>Contact Us</a></li>
+          </ul>
+        </div>
+      </div>
+      <br />
+      <div class="text-center text-sm">
+        ©Copyright 2023 <b class="text-pink">AzeezCode</b>. All rights reserved
+        <br />
+      </div>
+      <script>
+        var menuButton = document.getElementById("menu_btn");
+        var nav = document.getElementById("nav");
+
+        menuButton.addEventListener("click", function () {
+          nav.classList.toggle("hidden");
+        });
+      </script>
+    </footer>
+  </body>
+</html>
